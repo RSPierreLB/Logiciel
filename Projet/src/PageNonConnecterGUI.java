@@ -20,7 +20,7 @@ public class PageNonConnecterGUI extends JFrame {
 	private JButton bouton_connexion = new JButton("Connexion");
 	private JButton bouton_recherche = new JButton("Recherche");
 	
-	private JTextField tRecherche = new JTextField(30); //champ de recherche
+	protected JTextField tRecherche = new JTextField(30); //champ de recherche
 	
 	private JPanel panListeAnnonces = new JPanel();
 	private DefaultListModel liste_des_annonces = new DefaultListModel();
