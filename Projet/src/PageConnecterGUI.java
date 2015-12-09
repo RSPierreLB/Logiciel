@@ -71,7 +71,7 @@ public class PageConnecterGUI extends JFrame {
 	    listeAnnonces.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 		
 	    panListeAnnonces.setBorder(new LineBorder(new Color(0, 0, 0)));
-	    panListeAnnonces.setPreferredSize(new Dimension(630,410)); 				//size du panneau
+	    panListeAnnonces.setPreferredSize(new Dimension(780,410)); 				//size du panneau
 	    panListeAnnonces.add(listeAnnonces);
 		
 
