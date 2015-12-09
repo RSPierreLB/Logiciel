@@ -1,16 +1,9 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+
 
 import javax.swing.*;
-
-import appliPartage.PageConnexionGUI.b3Listener;
-import appliPartage.PageInscriptionGUI.b1Listener;
-import appliPartage.PageInscriptionGUI.b2Listener;
 
 public class PageMonCompteGUI extends JFrame {
 
