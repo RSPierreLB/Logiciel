@@ -8,6 +8,8 @@ public class Profil extends Observable{
 	private String password;
 	private String description;
 	private String photo;
+	
+	ArrayList<Annonce> listeAnnonce = new ArrayList<Annonce>(); 
 		
 	public Profil(Utilisateur utilisateur, String pseudo, String password) {
 		super();
