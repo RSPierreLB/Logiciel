@@ -1,5 +1,3 @@
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,12 +8,11 @@ import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-<<<<<<< HEAD
+
 public class PageNonConnecterGUI extends JFrame implements ActionListener {
-	
-=======
+
 public class PageNonConnecterGUI extends JFrame {
->>>>>>> origin/master
+
 	
 	private JPanel container = new JPanel();
 
@@ -114,7 +111,7 @@ public class PageNonConnecterGUI extends JFrame {
 		}
 		
 		if(event.getActionCommand().equals("bouton_recherche")){
-			//récupérer les valeurs du champ 
+			//rï¿½cupï¿½rer les valeurs du champ 
 		}
 	}
 
