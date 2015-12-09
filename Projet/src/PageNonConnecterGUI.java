@@ -111,7 +111,7 @@ public class PageNonConnecterGUI extends JFrame {
 		}
 		
 		if(event.getActionCommand().equals("bouton_recherche")){
-			//r�cup�rer les valeurs du champ 
+			//récupérer les valeurs du champ 
 		}
 	}
 
