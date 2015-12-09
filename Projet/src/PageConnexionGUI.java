@@ -5,11 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class PageConnexionGUI extends JFrame implements ActionListener{
-	
-<<<<<<< HEAD
-	
-=======
->>>>>>> origin/master
+
 	private JPanel container = new JPanel();
 	
 	private JLabel lLogin = new JLabel("Login :");
@@ -37,11 +33,6 @@ public class PageConnexionGUI extends JFrame implements ActionListener{
 		this.setContentPane(container);
 		this.setVisible(true);
 	}
-<<<<<<< HEAD
-	
-
-=======
->>>>>>> origin/master
 
 	
 	// Methods
