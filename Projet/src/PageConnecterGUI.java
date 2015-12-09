@@ -23,8 +23,7 @@ public class PageConnecterGUI extends JFrame {
 	private JList listeAnnonces = new JList(liste_des_annonces);
 	
 	
-	public PageConnecterGUI(Etudiant e) {
-		theEtudiant = e;
+	public PageConnecterGUI() {
 
 		this.setSize(650, 500); 												//size de la fenetre
 		this.setTitle("Application de partage sur le campus"); 					//titre de la fenetre

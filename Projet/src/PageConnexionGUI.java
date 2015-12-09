@@ -6,7 +6,10 @@ import javax.swing.*;
 
 public class PageConnexionGUI extends JFrame implements ActionListener{
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 	private JPanel container = new JPanel();
 	
 	private JLabel lLogin = new JLabel("Login :");
@@ -34,15 +37,18 @@ public class PageConnexionGUI extends JFrame implements ActionListener{
 		this.setContentPane(container);
 		this.setVisible(true);
 	}
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> origin/master
 
 	
 	// Methods
 	
 	private void AjoutElements() {
 		
-		container.setBackground(Color.GRAY);
+		container.setBackground(Color.LIGHT_GRAY);
 	    container.setLayout(new GridLayout(4, 2, 5, 5));
 	    
 		lLogin.setHorizontalAlignment(SwingConstants.CENTER);

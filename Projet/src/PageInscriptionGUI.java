@@ -6,8 +6,6 @@ import javax.swing.*;
 
 public class PageInscriptionGUI extends JFrame {
 	
-	protected Club leClub;
-	
 	private JPanel container = new JPanel();
 	
 	private JLabel lNom = new JLabel("Nom :");
@@ -26,8 +24,8 @@ public class PageInscriptionGUI extends JFrame {
 	
 	// Constructor
 
-	public PageInscriptionGUI(Club c) {
-		leClub = c;
+	public PageInscriptionGUI() {
+
 		this.setSize(250, 250);  //size de la fenetre
 		this.setTitle("Inscription"); //titre de la fenetre
 		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,22 +37,12 @@ public class PageInscriptionGUI extends JFrame {
 		this.setVisible(true);
 	}
 	
-	// Getters and Setters
-	
-	public Club getLeClub() {
-		return leClub;
-	}
-
-	public void setLeClub(Club leClub) {
-		this.leClub = leClub;
-	}
-
 	
 	// Methods
 	
 	private void AjoutElements() {
 		
-		container.setBackground(Color.GRAY);
+		container.setBackground(Color.LIGHT_GRAY);
 	    container.setLayout(new GridLayout(5, 2, 5, 5));
 	    
 		lNom.setHorizontalAlignment(SwingConstants.CENTER);
