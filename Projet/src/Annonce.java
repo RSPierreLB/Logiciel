@@ -150,7 +150,7 @@ public class Annonce implements Observer{
 
 	@Override
 	public String toString() {
-		return "Annonce [info=" + info + "]";
+		return "Annonce [info=" + info + " ]";
 	}
 	
 	
