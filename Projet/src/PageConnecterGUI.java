@@ -18,6 +18,8 @@ public class PageConnecterGUI extends JFrame {
 	private JButton b3 = new JButton("Mon compte");
 	private JButton b4 = new JButton("Déconnexion");
 	
+	protected JTextField tRecherche = new JTextField(30); //champ de recherche
+	
 	private JPanel panListeAnnonces = new JPanel();
 	private DefaultListModel liste_des_annonces = new DefaultListModel();
 	private JList listeAnnonces = new JList(liste_des_annonces);
@@ -25,7 +27,7 @@ public class PageConnecterGUI extends JFrame {
 	
 	public PageConnecterGUI() {
 
-		this.setSize(650, 500); 												//size de la fenetre
+		this.setSize(800, 500); 												//size de la fenetre
 		this.setTitle("Application de partage sur le campus"); 					//titre de la fenetre
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
@@ -52,9 +54,10 @@ public class PageConnecterGUI extends JFrame {
 		panBouton.setLayout(new GridLayout(1, 4));
 		panBouton.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panBouton.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		panBouton.setPreferredSize(new Dimension(630,50)); 						//size du panneau
+		panBouton.setPreferredSize(new Dimension(780,50)); 						//size du panneau
 		panBouton.setBackground(Color.RED); 									//couleur fond panneau bouton
 		panBouton.add(b1);
+		panBouton.add(tRecherche); //Champ de recherche
 		panBouton.add(b2);
 		panBouton.add(b3);
 		panBouton.add(b4);
