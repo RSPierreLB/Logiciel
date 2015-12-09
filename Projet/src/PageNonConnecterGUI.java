@@ -1,28 +1,32 @@
+
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-public class PageNonConnecterGUI extends JFrame {
-	public Etudiant theEtudiant;
+public class PageNonConnecterGUI extends JFrame implements ActionListener {
+	
 	
 	private JPanel container = new JPanel();
 
 	private JPanel panBouton = new JPanel();
-	private JButton b1 = new JButton("Recherche");
-	private JButton b2 = new JButton("Connexion");
+	private JButton bouton_connexion = new JButton("Connexion");
+	private JButton bouton_recherche = new JButton("Recherche");
+	
+	private JTextField tRecherche = new JTextField(30); //champ de recherche
 	
 	private JPanel panListeAnnonces = new JPanel();
 	private DefaultListModel liste_des_annonces = new DefaultListModel();
 	private JList listeAnnonces = new JList(liste_des_annonces);
 	
 	
-	public PageNonConnecterGUI(Etudiant e) {
-		theEtudiant = e;
+	public PageNonConnecterGUI() {
 		
 		this.setSize(540, 500); 												//size de la fenetre
 		this.setTitle("Application de partage sur le campus"); 					//titre de la fenetre
@@ -38,19 +42,25 @@ public class PageNonConnecterGUI extends JFrame {
 	private void AjoutElements() {
 		
 		// Creation des boutons
-		b1.setPreferredSize(new Dimension(250, 40)); 							//dimension du bouton1
-		b1.addActionListener(new b1Listener());
-		b2.setPreferredSize(new Dimension(250, 40)); 							//dimension du bouton2    
-	    b2.addActionListener(new b2Listener());
+		bouton_recherche.setPreferredSize(new Dimension(200, 40)); 							//dimension du bouton1
+		bouton_recherche.addActionListener(this);
+		bouton_recherche.setActionCommand("Rechercher");
+		
+		bouton_connexion.setPreferredSize(new Dimension(200, 40)); 							//dimension du bouton2    
+		bouton_connexion.addActionListener(this);
+		bouton_connexion.setActionCommand("Connexion");
+		
 
 		panBouton.setLayout(new GridLayout(1, 2));
 		panBouton.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panBouton.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		panBouton.setPreferredSize(new Dimension(520,50)); 						//size du panneau
 		panBouton.setBackground(Color.RED); 									//couleur fond panneau bouton
-		panBouton.add(b1);
-		panBouton.add(b2);
+		panBouton.add(bouton_recherche);
+		panBouton.add(tRecherche); //Champ de recherche
+		panBouton.add(bouton_connexion);
 	    
+		
 		
 		// Affichage des annonces
 	    listeAnnonces.setBackground(Color.WHITE);								//couleur du fond de la liste
@@ -62,7 +72,8 @@ public class PageNonConnecterGUI extends JFrame {
 	    panListeAnnonces.setBorder(new LineBorder(new Color(0, 0, 0)));
 	    panListeAnnonces.setPreferredSize(new Dimension(520,410)); 				//size du panneau
 	    panListeAnnonces.add(listeAnnonces);
-		
+	    
+	   		
 
 		//ajout tous les elements dans la fenetre
 		//container.setLayout(new GridLayout(2, 1));
@@ -73,13 +84,13 @@ public class PageNonConnecterGUI extends JFrame {
 	
 	
 	// Classes Listener
-	public class b1Listener implements ActionListener { 						//Bouton recherche
+	public class bouton_rechercheListener implements ActionListener { 						//Bouton recherche
 		public void actionPerformed(ActionEvent e1) {
 
 		}
 	}
 	
-	public class b2Listener implements ActionListener { 						//Bouton connexion
+	public class bouton_connexionListener implements ActionListener { 						//Bouton connexion
 		public void actionPerformed(ActionEvent e2) {
 
 		}
@@ -88,6 +99,18 @@ public class PageNonConnecterGUI extends JFrame {
 	public class listeAnnonceListener implements ListSelectionListener {		//Liste des annonces
 		public void valueChanged(ListSelectionEvent l1) {
 			
+		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent event) {
+		// TODO Auto-generated method stub
+		if(event.getActionCommand().equals("bouton_connexion")){
+			PageConnexionGUI pc = new PageConnexionGUI(); 
+		}
+		
+		if(event.getActionCommand().equals("bouton_recherche")){
+			//récupérer les valeurs du champ 
 		}
 	}
 
