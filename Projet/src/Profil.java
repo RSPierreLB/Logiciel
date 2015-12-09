@@ -17,25 +17,7 @@ public class Profil extends Observable{
 		this.pseudo = pseudo;
 		this.password = password;
 	}
-	
-	public Profil(Utilisateur utilisateur, String pseudo, String password,
-			String description) {
-		super();
-		this.utilisateur = utilisateur;
-		this.pseudo = pseudo;
-		this.password = password;
-		this.description = description;
-	}
-	
-	public Profil(Utilisateur utilisateur, String pseudo, String password,
-			String photo) {
-		super();
-		this.utilisateur = utilisateur;
-		this.pseudo = pseudo;
-		this.password = password;
-		this.photo = photo;
-	}
-	
+		
 	public Profil(Utilisateur utilisateur, String pseudo, String password,
 			String description, String photo) {
 		super();
