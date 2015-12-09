@@ -50,6 +50,6 @@ public class Administrateur extends Utilisateur implements Observer{
 		return "Administrateur [info=" + info + "]";
 	}
 	
-	
+ essaie	
 }
 essai git
